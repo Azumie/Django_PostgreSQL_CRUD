@@ -18,5 +18,15 @@
         <textarea name="description" id="description" rows="3"></textarea>
         <button>GUARDANDO</button>
     </form>
+{% for task in tasks %}
+    <div>
+        <h4>{{task.title}}</h4>
+        <p>{{task.description}}</p>
+        <button>Eliminar</button>
+    </div>
+{% empty %}
+    <h1>Cargue data primeramente</h1>
+{% endfor %}
+
 </body>
 </html>
